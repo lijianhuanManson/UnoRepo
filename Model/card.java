@@ -1,16 +1,16 @@
 package Model;
 
-public class card {
+public class Card {
 	
 	private String color;
     private int value;
     private String image;
     private String type;
-	public card() {
+	public Card() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public card(String color, int value, String image, String type) {
+	public Card(String color, int value, String image, String type) {
 		super();
 		this.color = color;
 		this.value = value;

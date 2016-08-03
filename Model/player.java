@@ -1,52 +1,64 @@
 package Model;
 
-public class player {
+import java.util.ArrayList;
 
-	private int id;
+public class Player {
+
+	
 	private String name;
-	private int handCard;
+	private ArrayList<Card> handCardList;
+	
+	public Player (String name){
+		this.name=name;
+		this.handCardList =new ArrayList<Card>();
+	}
+
+	
+	public void AddHandCard(Card c){
+		
+		handCardList.add(c);
+		
+	}
+	
+	public Card RemoveHandCard(Card c){
+		
+		
+		handCardList.remove(c);
+		return c;
+	}
 	
 	
-	public player(int id, String name, int handCard) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.handCard = handCard;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	//getter setter
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getHandCard() {
-		return handCard;
+
+
+	public ArrayList<Card> getHandCardList() {
+		return handCardList;
 	}
-	public void setHandCard(int handCard) {
-		this.handCard = handCard;
+
+
+	public void setHandCardList(ArrayList<Card> handCardList) {
+		this.handCardList = handCardList;
 	}
-	
-	
-	public void AddHandCard(card c){
-		
-		
-		handCard += 1;
-	}
-	
-	public void RemoveHandCard(){
-		
-		handCard -= 1;
-	}
+
+
 	@Override
 	public String toString() {
-		return "player [id=" + id + ", name=" + name + ", handCard=" + handCard + "]";
+		return "Player [name=" + name + "]";
 	}
+
+
+
+
+	
+	
 	
 	
 	
